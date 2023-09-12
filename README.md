@@ -5,7 +5,7 @@ homework for week 3 challenge
 # Recap
 
 ```
-did prompts with if them statements to have the user declare what they want their random password to consist of
+did prompts with if else statements to have the user declare what they want their random password to consist of
 at the end i combined the users asnwers to make a string for what the random password can include
 then i returned that value and set it to password
 
