@@ -1,7 +1,5 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -25,63 +23,82 @@ function generatePassword() {
 
  if (lCase == "yes") {
   alert("Thank you, Your password will contain lowercase characters")
-  var lCase = "abcdefghijklmnopqrstuvwxyz"
  } else if (lCase == "no") {
  alert("Thank you, Your password will not contain lowercase characters")
- var lCase = ""
  } else {
   alert("Please enter yes or no")
   var lCase = prompt("Please choose if you want lowercase characters in your password please type yes or no")
  }
 
- if (lCase == "abcdefghijklmnopqrstuvwxyz" || lCase =="") {
+ if (lCase == "yes" || lCase =="no") {
   var uCase = prompt("Please choose if you want uppercase characters in your password please type yes or no")
 }
 
 if (uCase == "yes") {
   alert("Thank you, Your password will contain uppercase characters")
-  var uCase = "ABCEFGHIJKLMNOPQRSTUVWXYZ"
  } else if (uCase == "no") {
  alert("Thank you, Your password will not contain uppercase characters")
- var uCase = ""
  } else {
   alert("Please enter yes or no")
   var uCase = prompt("Please choose if you want uppercase characters in your password please type yes or no")
  }
 
- if (uCase == "ABCEFGHIJKLMNOPQRSTUVWXYZ" || uCase =="") {
+ if (uCase == "yes" || uCase =="no") {
   var nume = prompt("Please choose if you want numeric characters in your password please type yes or no")
 }
 
 if (nume == "yes") {
-  alert("Thank you, Your password will contain uppercase characters")
-  var nume = "123456789"
+  alert("Thank you, Your password will contain numeric characters")
  } else if (nume == "no") {
- alert("Thank you, Your password will not contain uppercase characters")
- var nume = ""
+ alert("Thank you, Your password will not contain numeric characters")
  } else {
   alert("Please enter yes or no")
   var nume = prompt("Please choose if you want numeric characters in your password please type yes or no")
  }
 
- if (nume == "123456789" || nume =="") {
+ if (nume == "yes" || nume =="no") {
   var sChar = prompt("Please choose if you want special characters in your password please type yes or no")
 }
 
 if (sChar == "yes") {
-  alert("Thank you, Your password will contain uppercase characters")
-  var sChar = "#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+  alert("Thank you, Your password will contain special characters")
  } else if (sChar == "no") {
- alert("Thank you, Your password will not contain uppercase characters")
- var sChar = ""
+ alert("Thank you, Your password will not contain special characters")
  } else {
   alert("Please enter yes or no")
-  var sChar = prompt("Please choose if you want numeric characters in your password please type yes or no")
+  var sChar = prompt("Please choose if you want special characters in your password please type yes or no")
  }
 
- if (lCase == "" && uCase == "" && nume == "" && sChar == "" ) {
- alert("Must choose at least one to include")
- }
+if (lCase == "yes"){
+var lCase = "abcdefghijklmnopqrstuvwxyz"
+}
+if (lCase == "no"){
+  var lCase = ""
+  }
+  if (uCase == "yes"){
+    var uCase = "ABCEFGHIJKLMNOPQRSTUVWXYZ"
+    }
+    if (uCase == "no"){
+      var uCase = ""
+      }
+      if (nume == "yes"){
+        var nume = "123456789"
+        }
+        if (nume == "no"){
+          var nume = ""
+          }
+          if (sChar == "yes"){
+            var sChar = "#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+            }
+            if (sChar == "no"){
+              var sChar = ""
+              }
+  
+              if (lCase == "" && uCase == "" && nume == "" && sChar == "" ) {
+                alert("Must choose at least one to include")
+                }
+      
+
 var chars = lCase + uCase + nume + sChar
 
 var password = '';
@@ -93,5 +110,4 @@ var password = '';
 
 }
 
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
